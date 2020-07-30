@@ -374,7 +374,6 @@ module.exports = {
     "prettier/prettier": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint"
     // '@typescript-eslint/no-explicit-any': 'warn',
   },
 };
