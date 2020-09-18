@@ -7,6 +7,9 @@
     "eslint",
     "eslintconfig"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/yeseh"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "vsCred": "vsts-npm-auth -config .npmrc"
