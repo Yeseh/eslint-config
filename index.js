@@ -38,7 +38,7 @@ module.exports = {
     // 'no-await-in-loop': 'off',
     // 'no-compare-neg-zero': 'error', // eslint:recommended
     "no-cond-assign": "off", // eslint:recommended
-    // 'no-console': 'error', // eslint:recommended
+    'no-console': 'warning', // eslint:recommended
     // 'no-constant-condition': 'error', // eslint:recommended
     // 'no-control-regex': 'error', // eslint:recommended
     // 'no-debugger': 'error', // eslint:recommended
@@ -88,11 +88,11 @@ module.exports = {
     // 'consistent-return': 'off'
     // TODO(philipwalton): add an option to enforce braces with the
     // exception of simple, single-line if statements.
-    curly: ["error", "multi-line"],
+    curly: ["error", "multi"],
     // 'default-case': 'off',
     // 'dot-location': 'off',
     // 'dot-notation': 'off',
-    // 'eqeqeq': 'off',
+    'eqeqeq': 'warning',
     "guard-for-in": "error",
     // 'no-alert': 'off',
     "no-caller": "error",
@@ -194,7 +194,7 @@ module.exports = {
     "array-bracket-spacing": ["error", "never"],
     "array-element-newline": "off", // eslint:recommended
     "block-spacing": ["error", "never"],
-    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
+    "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
     // camelcase: ['error', {properties: 'never'}],
     // 'capitalized-comments': 'off',
     "comma-dangle": ["error", "always-multiline"],
@@ -257,7 +257,7 @@ module.exports = {
     // 'max-statements-per-line': 'off',
     // at the end of the line.
     // 'multiline-ternary': 'off',
-    "new-cap": "error",
+    "new-cap": "off",
     // 'new-parens': 'off',
     // 'newline-per-chained-call': 'off',
     "no-array-constructor": "error",
