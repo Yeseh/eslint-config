@@ -38,7 +38,7 @@ module.exports = {
     // 'no-await-in-loop': 'off',
     // 'no-compare-neg-zero': 'error', // eslint:recommended
     "no-cond-assign": "off", // eslint:recommended
-    'no-console': 'warning', // eslint:recommended
+    'no-console': 'warn', // eslint:recommended
     // 'no-constant-condition': 'error', // eslint:recommended
     // 'no-control-regex': 'error', // eslint:recommended
     // 'no-debugger': 'error', // eslint:recommended
@@ -92,7 +92,7 @@ module.exports = {
     // 'default-case': 'off',
     // 'dot-location': 'off',
     // 'dot-notation': 'off',
-    'eqeqeq': 'warning',
+    'eqeqeq': 'warn',
     "guard-for-in": "error",
     // 'no-alert': 'off',
     "no-caller": "error",
