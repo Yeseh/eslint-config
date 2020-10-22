@@ -38,7 +38,7 @@ module.exports = {
     // 'no-await-in-loop': 'off',
     // 'no-compare-neg-zero': 'error', // eslint:recommended
     "no-cond-assign": "off", // eslint:recommended
-    'no-console': 'warn', // eslint:recommended
+    'no-console': 'off', // eslint:recommended
     // 'no-constant-condition': 'error', // eslint:recommended
     // 'no-control-regex': 'error', // eslint:recommended
     // 'no-debugger': 'error', // eslint:recommended
@@ -88,7 +88,7 @@ module.exports = {
     // 'consistent-return': 'off'
     // TODO(philipwalton): add an option to enforce braces with the
     // exception of simple, single-line if statements.
-    curly: ["error", "multi"],
+    curly: ["error", "all"],
     // 'default-case': 'off',
     // 'dot-location': 'off',
     // 'dot-notation': 'off',
@@ -193,8 +193,8 @@ module.exports = {
     "array-bracket-newline": "off", // eslint:recommended
     "array-bracket-spacing": ["error", "never"],
     "array-element-newline": "off", // eslint:recommended
-    "block-spacing": ["error", "never"],
-    "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
+    "block-spacing": ["error", "always"],
+    "brace-style": ["error", "stroustrup", { allowSingleLine: false }],
     // camelcase: ['error', {properties: 'never'}],
     // 'capitalized-comments': 'off',
     "comma-dangle": ["error", "always-multiline"],
@@ -210,9 +210,9 @@ module.exports = {
     // 'id-blacklist': 'off',
     // 'id-length': 'off',
     // 'id-match': 'off',
-    // indent: [
-    //   'error',
-    //   2,
+    indent: [
+      'error',
+      "tab",
     //   {
     //     CallExpression: {
     //       arguments: 2,
@@ -230,7 +230,7 @@ module.exports = {
     //     SwitchCase: 1,
     //     ignoredNodes: ['ConditionalExpression'],
     //   },
-    // ],
+    ],
     // 'jsx-quotes': 'off',
     "key-spacing": "error",
     "keyword-spacing": "error",
@@ -266,7 +266,7 @@ module.exports = {
     // 'no-inline-comments': 'off',
     // 'no-lonely-if': 'off',
     // 'no-mixed-operators': 'off',
-    "no-mixed-spaces-and-tabs": "error", // eslint:recommended
+    // "no-mixed-spaces-and-tabs": "error", // eslint:recommended
     // 'no-multi-assign': 'off',
     "no-multiple-empty-lines": ["error", { max: 2 }],
     // 'no-negated-condition': 'off',
@@ -274,16 +274,21 @@ module.exports = {
     "no-new-object": "error",
     // 'no-plusplus': 'off',
     // 'no-restricted-syntax': 'off',
-    "no-tabs": "error",
+    "no-tabs": "off",
     // 'no-ternary': 'off',
     "no-trailing-spaces": "error",
     // 'no-underscore-dangle': 'off',
     'no-unneeded-ternary': 'off',
     // 'no-whitespace-before-property': 'off',
     // 'nonblock-statement-body-position': 'off',
-    // 'object-curly-newline': 'off',
-    "object-curly-spacing": "off",
-    // 'object-property-newline': 'off',
+    'object-curly-newline': ["error", {
+        ObjectExpression: {minProperties: 3, multiline: true},
+        ObjectPattern: {minProperties: 4, multiline: true},
+        ImportDeclaration: {minProperties: 3, multiline: true},
+        ExportDeclaration: {minProperties: 3, multiline: true}
+    }],
+    "object-curly-spacing": ["error", "always"],
+    'object-property-newline': ['error'],
     "one-var": [
       "error",
       {
@@ -298,7 +303,7 @@ module.exports = {
     "padded-blocks": ["error", "never"],
     // 'padding-line-between-statements': 'off',
     "quote-props": ["error", "consistent"],
-    quotes: ["error", "double", { allowTemplateLiterals: true }],
+    quotes: ["error", "single", { allowTemplateLiterals: true }],
     // 'require-jsdoc': [
     //     'error',
     //     {
@@ -323,7 +328,7 @@ module.exports = {
         named: "never",
       },
     ],
-    // 'space-in-parens': 'off',
+    'space-in-parens': ["error", 'never'],
     // 'space-infix-ops': 'off',
     // 'space-unary-ops': 'off',
     "spaced-comment": ["error", "always"],
